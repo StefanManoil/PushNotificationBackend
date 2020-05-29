@@ -20,3 +20,7 @@ $router->get('/', function () use ($router) {
 $router->group(['namespace' => '\App\Http\Controllers', 'prefix' => 'api'], function () use ($router) {
   $router->post('push_notif', ['uses' => 'PushNotificationController@sendPushNotification']);
 });
+
+$router->group(['namespace'] => '\App\Http\Controllers', 'prefix' => 'data', function () use ($router) {
+  $router->post('scooter_data', ['uses' => '']);
+});
